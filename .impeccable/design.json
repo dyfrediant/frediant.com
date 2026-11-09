@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T00:00:00Z",
+  "title": "Design System: Frediant Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Soft Paper",
+        "tonalRamp": [
+          "#1c201b",
+          "#353a34",
+          "#4d534c",
+          "#656b64",
+          "#858b83",
+          "#a6aca4",
+          "#c7ccc4",
+          "#e4e7df"
+        ]
+      },
+      "paper-raised": {
+        "role": "neutral",
+        "displayName": "Raised Paper"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Charcoal Ink",
+        "tonalRamp": [
+          "#20231f",
+          "#343833",
+          "#4b504a",
+          "#656b64",
+          "#858b83",
+          "#a6aca4",
+          "#c7ccc4",
+          "#eff1ec"
+        ]
+      },
+      "secondary-surface": {
+        "role": "neutral",
+        "displayName": "Secondary Surface"
+      },
+      "muted-surface": {
+        "role": "neutral",
+        "displayName": "Quiet Surface"
+      },
+      "muted-ink": {
+        "role": "neutral",
+        "displayName": "Muted Ink"
+      },
+      "forest": {
+        "role": "primary",
+        "displayName": "Muted Forest",
+        "tonalRamp": [
+          "#17231a",
+          "#293a2d",
+          "#38513e",
+          "#42654c",
+          "#5d805f",
+          "#7d9e7d",
+          "#a6bea1",
+          "#d7e3d2"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline"
+      },
+      "dark-paper": {
+        "role": "neutral",
+        "displayName": "Dark Paper"
+      },
+      "dark-raised": {
+        "role": "neutral",
+        "displayName": "Dark Raised Surface"
+      },
+      "dark-ink": {
+        "role": "neutral",
+        "displayName": "Soft Light Ink"
+      },
+      "dark-muted-ink": {
+        "role": "neutral",
+        "displayName": "Dark Muted Ink"
+      },
+      "dark-forest": {
+        "role": "primary",
+        "displayName": "Pale Forest Accent",
+        "tonalRamp": [
+          "#101510",
+          "#273228",
+          "#405442",
+          "#5c765d",
+          "#7c9b7e",
+          "#a4c3a5",
+          "#c7dcc7",
+          "#e6efe5"
+        ]
+      },
+      "dark-hairline": {
+        "role": "neutral",
+        "displayName": "Dark Hairline"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Editorial Display",
+        "purpose": "Hero headline and primary page titles."
+      },
+      "heading": {
+        "displayName": "Section Heading",
+        "purpose": "Major public page sections."
+      },
+      "title": {
+        "displayName": "Serif Title",
+        "purpose": "Project and article titles."
+      },
+      "body": {
+        "displayName": "Sans Body",
+        "purpose": "Paragraphs, descriptions, and navigation."
+      },
+      "label": {
+        "displayName": "Mono Label",
+        "purpose": "Compact metadata and uppercase labels."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "link-underline",
+        "value": "0.4s cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Quiet underline reveal for links."
+      },
+      {
+        "name": "image-hover",
+        "value": "900ms cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Subtle project image scale on hover."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Contact Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Compact solid action for the main contact path.",
+      "html": "<button class=\"ds-button-primary\">Let’s talk</button>",
+      "css": ".ds-button-primary { background: #20231f; color: #f7f7f4; border: 1px solid transparent; border-radius: 0.3rem; height: 2.25rem; padding: 0 0.875rem; font: 500 0.75rem 'Instrument Sans', Arial, sans-serif; transition: background-color 180ms ease; } .ds-button-primary:hover { background: #42654c; } .ds-button-primary:focus-visible { outline: 2px solid #42654c; outline-offset: 3px; } .ds-button-primary:active { transform: translateY(1px); }"
+    },
+    {
+      "name": "Outline Action",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Quiet secondary action used for archive navigation.",
+      "html": "<button class=\"ds-button-outline\">All projects</button>",
+      "css": ".ds-button-outline { background: #f7f7f4; color: #20231f; border: 1px solid #dedfda; border-radius: 0.3rem; height: 2.5rem; padding: 0 1rem; font: 400 0.75rem 'Instrument Sans', Arial, sans-serif; transition: background-color 180ms ease; } .ds-button-outline:hover { background: #eeefeb; } .ds-button-outline:focus-visible { outline: 2px solid #42654c; outline-offset: 3px; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "project-card",
+      "description": "Text-led project link with optional uploaded cover art and plain metadata.",
+      "html": "<a class=\"ds-project\" href=\"#\"><strong>Project title</strong><span class=\"ds-project-summary\">A verified description of the work.</span></a>",
+      "css": ".ds-project { display: grid; gap: 0.75rem; color: #20231f; text-decoration: none; font: 500 1.125rem 'Instrument Sans', Arial, sans-serif; } .ds-project-image { display: block; aspect-ratio: 4 / 3; overflow: hidden; border: 1px solid #dedfda; border-radius: 0.3rem; background: #eeefeb; } .ds-project-summary { color: #656b64; font: 400 0.875rem/1.6 'Instrument Sans', Arial, sans-serif; } .ds-project:focus-visible { outline: 2px solid #42654c; outline-offset: 4px; } @media (prefers-reduced-motion: no-preference) { .ds-project-image { transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-project:hover .ds-project-image { transform: scale(1.01); } }"
+    },
+    {
+      "name": "Primary Navigation Link",
+      "kind": "nav",
+      "description": "Plain text link with a fine underline for hover and active states.",
+      "html": "<a class=\"ds-nav-link\" href=\"#\">Work</a>",
+      "css": ".ds-nav-link { position: relative; color: #20231f; text-decoration: none; font: 400 0.875rem 'Instrument Sans', Arial, sans-serif; } .ds-nav-link::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 100%; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-nav-link:hover::after, .ds-nav-link[aria-current='page']::after { transform: scaleX(1); transform-origin: left; } .ds-nav-link:focus-visible { outline: 2px solid #42654c; outline-offset: 4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Portfolio",
+    "overview": "This portfolio uses an editorial frame that lets verified project listings provide the visual interest. Warm, near-neutral surfaces, thin dividers, and a restrained forest accent keep the interface composed while serif headlines add a human voice. The public site has matching light and dark palettes; its tokens are scoped to `.site-theme` so the separate admin interface can keep its own system.\n\nThe layout gives the introduction, selected work, profile, and contact room to breathe. Navigation and contact remain easy to find, while restrained motion supports links and optional imagery without turning the page into a sequence of effects. Imported projects are text-led because the source thumbnails redirect to the new domain; project images can be added in the admin studio.",
+    "keyCharacteristics": [
+      "Editorial serif display paired with a practical sans body face.",
+      "Warm-neutral surfaces and a single muted green accent.",
+      "Hairline borders and generous section spacing instead of ornament.",
+      "Public-site color tokens isolated from admin tokens."
+    ],
+    "rules": [
+      {
+        "name": "The Scoped Public Palette Rule",
+        "body": "Apply portfolio palette tokens inside `.site-theme`; admin colors are a separate concern.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do let verified project details carry visual emphasis; use imagery when it is available.",
+      "Do add project case-study details only when they are supplied and verified.",
+      "Do keep focus states visible and honor reduced-motion preferences.",
+      "Do use the dark public palette as the tonal counterpart to the light palette."
+    ],
+    "donts": [
+      "Don't add decorative section numbering or eyebrow kickers to public pages.",
+      "Don't invent project years, outcomes, testimonials, or detailed case-study claims.",
+      "Don't reintroduce the removed grid, grain, marquee, or reveal treatment to public pages."
+    ]
+  }
+}
